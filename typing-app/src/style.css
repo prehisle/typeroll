@@ -1,0 +1,77 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#app {
+  width: 800px;
+  max-width: 90%;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#typing-area {
+  position: relative;
+  font-size: 2rem;
+  line-height: 2;
+  border: 2px solid #555;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0.5em; /* gap between letters and words */
+}
+
+#words span {
+  white-space: pre; /* Render spaces correctly */
+}
+
+#words span.correct {
+  color: #a5d6a7; /* Light green for correct letters */
+}
+
+#words span.incorrect {
+  color: #ef9a9a; /* Light red for incorrect letters */
+}
+
+#caret {
+  width: 2px;
+  height: 2.5rem; /* Match font size + line height */
+  background-color: #646cff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
